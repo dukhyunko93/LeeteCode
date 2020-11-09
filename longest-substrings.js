@@ -39,8 +39,7 @@ const lengthOfLongestSubstring = function(s) {
         }
             
     }
-    console.log(set)
-    return console.log(max)
+    return max
 };
     
 s = "sdawjmmbxckves"
