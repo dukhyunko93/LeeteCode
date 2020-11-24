@@ -23,11 +23,8 @@
 // rotate 2 steps to the right: [3,99,-1,-100]
 
 var rotate = function(nums, k) {
-    let shiftArray = nums.splice(k * -1);
-    let result = shiftArray.concat(nums)
-    console.log(nums)
-    return result
+    nums.unshift(...nums.splice(nums.length - k))
 };
 
-let nums = [1,2,3,4,5,6,7], k = 3
+let nums = [1,2], k = 3
 
