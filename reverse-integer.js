@@ -11,12 +11,22 @@
 var reverse = function(x) {
     if (Math.abs(x) > (2 ** 31)) return 0
     if (x === 0) return 0
-    let _x = Math.abs(x)
+
+    let _x = Math.abs(x);
     let result = 0;
+
     while(_x > 0){
         result = ((result * 10) + (_x % 10));
-        _x = Math.floor( _x / 10);
+        _x = Math.floor(_x / 10);
+        console.log(_x)
     }
+
     if (result > (2 ** 31)) return 0
     return x < 0 ? result * -1 : result
 }
+
+let x = 123;
+
+reverse(x)
+
+// node reverse-integer.js
