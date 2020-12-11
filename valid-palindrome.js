@@ -15,4 +15,4 @@ var isPalindrome = function(s) {
 let s = "A man, a plan, a canal: Panama"
 isPalindrome(s)
 
-// node valid-palindrome.js
+// node valid-palindrome.js 
