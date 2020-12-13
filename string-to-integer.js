@@ -16,15 +16,19 @@
 
 var myAtoi = function(s) {
     let array = s.split(" ")
-    let result;
+    let result = 0;
     for (let i = 0; i < array.length; i++){
         if(!!result) break
         if(array[i] === "" || !!parseInt(array[i])){
             if(!!parseInt(array[i])) result = parseInt(array[i])
-        } else break
+        }
     }
-    if(!result) return 0;
     if(result <= -2147483648) return -2147483648;
     if(result >= 2147483648) return 21474836487;
     return result;
 };
+
+let str = "4193 with words"
+myAtoi(str);
+
+// node string-to-integer.js
