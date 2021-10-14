@@ -29,11 +29,11 @@ const lengthOfLongestSubstring = function(s) {
     let max = 0
     
     while(b_pointer < s.length){
-        if(!set.has(s[b_pointer])){
+        if (!set.has(s[b_pointer])) {
             set.add(s[b_pointer])
             b_pointer++
             max = Math.max(set.size, max)
-        }else{
+        } else {
             set.delete(s.charAt(a_pointer))
             a_pointer++
         }
