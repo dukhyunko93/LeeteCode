@@ -7,36 +7,44 @@ function solution(S) {
 
   for (j = 0; j < S.length; j++){
       // for lower case
-      console.log(S[j])
       if (S[j] === S[j].toLowerCase()) {
+          console.log('lower', S[j], set.has(S[j].toUpperCase()), current, minLength);
           if (set.has(S[j].toUpperCase())) {
               current++;
           } else {
               if (minLength === 0 && current > 1) {
                   minLength = current;
                   current = 0;
-              } else if (minLength !== 0 ){
+                  console.log('lower', current)
+              } else if (minLength !== 0 || current > 0){
                   minLength = Math.min(minLength, current);
                   current = 0;
+                  console.log('lower', current)
               }
           }
       } else {
-          if (set.has(S[j].toLowerCase())) {
-              current++;
-          } else {
-              if (minLength === 0 && current > 1) {
-                  minLength = current;
-                  current = 0;
-              } else if (minLength !== 0 ){
-                  minLength = Math.min(minLength, current);
-                  current = 0;
-              }
-          }
+        console.log('upper', S[j], set.has(S[j].toLowerCase()), current, minLength);
+            if (set.has(S[j].toLowerCase())) {
+                current++;
+            } else {
+                if (minLength === 0 && current > 1) {
+                    minLength = current;
+                    current = 0;
+                    console.log('upper', current)
+                } else if (minLength !== 0 || current > 0){
+                    minLength = Math.min(minLength, current);
+                    current = 0;
+                    console.log('upper', current)
+                }
+            }
       }
   }
-  return minLength
+  if (current === S.length) minLength = current;
+  return minLength === 0 ? -1 : minLength
 }
 
 
-let S = "azABazba"
+let S = "TacoCat"
+// let S = "azABaabza"
+
 console.log(solution(S))
