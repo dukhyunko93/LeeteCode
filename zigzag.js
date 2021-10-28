@@ -24,3 +24,5 @@ var convert = function(s, numRows) {
 let s = "AB", numRows = 1;
 
 console.log(convert(s, numRows));
+
+//test/
