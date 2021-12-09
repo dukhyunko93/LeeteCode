@@ -21,4 +21,4 @@
 // ['John', 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com']] would still be accepted.
 
 
-// first compare the index[0] if names is same, compare the emails. if there are any matching emails merge the emails together.
+// first compare the index[0] if names is same, compare the emails. if there are any matching emails merge the emails together
